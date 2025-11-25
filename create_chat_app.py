@@ -4,7 +4,7 @@ from pathlib import Path
 # Constants
 BASE_FOLDER = 'chat-app'
 SERVER_IP = '5.6.6.6'
-USERNAME = 'admin'
+USERNAME = 'student'
 PASSWORD = 'password123'
 UPDATE_TIMEOUT = 3
 
