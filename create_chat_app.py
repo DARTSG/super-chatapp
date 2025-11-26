@@ -1,13 +1,13 @@
 import os
 from pathlib import Path
-
+from dotenv import load_dotenv
 # Constants
 BASE_FOLDER = 'chat-app'
 SERVER_IP = '5.6.6.6'
 USERNAME = 'student'
-PASSWORD = 'password123'
 UPDATE_TIMEOUT = 3
-
+load_dotenv()
+PASSWORD = os.environ.get("PASSWORD")
 # File contents
 main_py = """import sys
 from PyQt5.QtWidgets import QApplication
@@ -185,6 +185,7 @@ send_message_service_py = """def send_message(message, chat_display):
 
 requirements_txt = """PyQt5
 paramiko
+python-dotenv
 """
 
 readme_md = """# Chat Application
